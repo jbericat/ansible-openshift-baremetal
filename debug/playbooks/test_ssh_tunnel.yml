@@ -1,0 +1,9 @@
+- name: "[ANSAB001/001 - F5-BIGIP] - Adding a New Balanced Service"
+  hosts: all
+  gather_facts: false
+  roles:
+    - common
+  tasks:
+
+    - name: PING SSH HOST
+      ansible.builtin.ping:
