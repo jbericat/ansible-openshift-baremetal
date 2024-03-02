@@ -1,0 +1,5 @@
+---
+- name: 1. Create KVM Bridge
+  ansible.builtin.include_tasks:
+    file: 1_1_create kvm bridge.yml
+...
