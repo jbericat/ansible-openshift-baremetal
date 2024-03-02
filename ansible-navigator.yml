@@ -72,8 +72,8 @@ ansible-navigator:
     #   - src: "/home/beri/.ssh/"
     #     dest: "/home/beri/.ssh/"
     #     options: "Z"
-#     container-options:
-#       - "--net=host"
+    container-options:
+      - "--net=host"
 #
 #   format: json
 #
