@@ -9,7 +9,7 @@ lib64
 share
 bin
 pyvenv.cfg
-/.config
+# /.config
 /logs
 *.log
 
