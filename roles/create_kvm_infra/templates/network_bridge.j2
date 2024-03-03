@@ -1,0 +1,12 @@
+<network>
+  <name>{{ create_kvm_infra_net_bridge_name }}</name>
+  <forward mode='nat'>
+    <nat>
+      <port start='1024' end='65535'/>
+    </nat>
+  </forward>
+  <bridge name='{{ create_kvm_infra_net_bridge_name }}' stp='on' delay='0'/>
+  <domain name='{{ create_kvm_infra_net_bridge_name }}'/>
+  <ip address='{{ create_kvm_infra_net_bridge_ip }}' netmask='{{ create_kvm_infra_net_bridge_netmask }}'>
+  </ip>
+</network>

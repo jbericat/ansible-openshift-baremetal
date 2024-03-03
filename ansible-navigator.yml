@@ -63,14 +63,14 @@ ansible-navigator:
 #         KEY1: VALUE1
 #         KEY2: VALUE2
 #         KEY3: VALUE3
-    image: quay.io/jordi_bericat/ansible-ee:2.15-latest
+    image: quay.io/jordi_bericat/ansible-ee:2.16-latest
     pull:
       arguments:
         - "--tls-verify=false"
       policy: missing
     # volume-mounts:
     #   - src: "/home/beri/.ssh/"
-    #     dest: "/home/beri/.ssh/"
+    #     dest: "/home/runner/.ssh/"
     #     options: "Z"
     container-options:
       - "--net=host"

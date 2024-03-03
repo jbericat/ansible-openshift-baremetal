@@ -1,0 +1,27 @@
+---
+create_kvm_infra_net_bridge_name: ocp4_bridge
+create_kvm_infra_net_bridge_ip: 192.168.100.1
+create_kvm_infra_net_bridge_netmask: 255.255.255.0
+create_kvm_infra_virtual_machines:
+  - name: bootstrap.ocp4.beri.lab
+    mac_address: 52:54:00:27:e2:61
+    dhcp_reserved_address: 192.168.100.10
+  - name: master01.ocp4.beri.lab
+    mac_address: 52:54:00:78:6f:51
+    dhcp_reserved_address: 192.168.100.11
+  - name: master02.ocp4.beri.lab
+    mac_address: 52:54:00:db:91:fb
+    dhcp_reserved_address: 192.168.100.12
+  - name: master03.ocp4.beri.lab
+    mac_address: 52:54:00:9d:2c:b4
+    dhcp_reserved_address: 192.168.100.13
+  - name: worker01.ocp4.beri.lab
+    mac_address: 52:54:00:89:bd:2c
+    dhcp_reserved_address: 192.168.100.21
+  - name: worker02.ocp4.beri.lab
+    mac_address: 52:54:00:09:53:90
+    dhcp_reserved_address: 192.168.100.22
+  - name: worker03.ocp4.beri.lab
+    mac_address: 52:54:00:76:81:d1
+    dhcp_reserved_address: 192.168.100.23
+...

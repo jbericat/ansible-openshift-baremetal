@@ -1,0 +1,4 @@
+---
+- name: community.libvirt
+  type: Galaxy
+...
