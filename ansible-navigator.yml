@@ -67,7 +67,7 @@ ansible-navigator:
     pull:
       arguments:
         - "--tls-verify=false"
-      policy: missing
+      policy: always
     # volume-mounts:
     #   - src: "/home/beri/.ssh/"
     #     dest: "/home/runner/.ssh/"
