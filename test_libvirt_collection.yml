@@ -1,0 +1,10 @@
+- name: Test Community.Libvirt collection
+  hosts: all
+  gather_facts: false
+  # vars:
+  tasks:
+
+    - name: Get libvirt VM info
+      community.libvirt.virt:
+        name: ocp-bastion-server
+        command: info

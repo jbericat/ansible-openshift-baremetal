@@ -1,0 +1,37 @@
+---
+# Requirements file for Ansible Galaxy
+
+# Specify a role from Ansible Galaxy
+- name: example_role
+  src: https://github.com/username/example_role
+  version: v1.0.0
+
+# Specify a role hosted on a Git repository
+- name: another_role
+  src: git+https://github.com/username/another_role.git
+  version: master
+
+# Specify a role from Ansible Galaxy with a specific version
+- name: some_role
+  version: 2.1.0
+
+# Specify a role from Ansible Galaxy without a version (latest will be used)
+- name: different_role
+
+# Specify a collection from Ansible Galaxy
+- name: example_collection
+  src: https://github.com/username/example_collection
+  version: v1.2.3
+
+# Specify a collection hosted on a Git repository
+- name: another_collection
+  src: git+https://github.com/username/another_collection.git
+  version: main
+
+# Specify a collection from Ansible Galaxy with a specific version
+- name: some_collection
+  version: 1.0.0
+
+# Specify a collection from Ansible Galaxy without a version (latest will be used)
+- name: different_collection
+...

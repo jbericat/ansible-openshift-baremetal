@@ -1,0 +1,4 @@
+---
+- name: 2.1. Creating bastion VM for the OCP cluster deployment and management
+
+...

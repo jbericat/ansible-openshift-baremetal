@@ -1,0 +1,28 @@
+# Author: Jordi Bericat Ruz - jbericat@github - 03/04/2024
+
+- name: Deploy OpenShift 4.14 on Baremetal (KVM)
+  hosts: all
+  gather_facts: false
+  roles:
+    - common
+    - deploy_bastion_vm
+    - deploy_ocp_cluster
+
+  pre-tasks:
+
+  - name: x.y. Creating LibVirt Network Bridge for the OpenShift Cluster
+    community.libvirt.virt_net:
+      state: present
+      autostart: true
+      name: "{{ create_kvm_infra_net_bridge_name }}"
+      xml: "{{ lookup('template', 'network_bridge.j2') }}"
+
+  # DEBUG: Maybe it would be better to move this task to the deploy role
+  - name: x.y. Activating LibVirt Network Bridge for the OpenShift Cluster
+    community.libvirt.virt_net:
+      state: active
+      name: "{{ create_kvm_infra_net_bridge_name }}"
+
+  tasks:
+
+  post-tasks:
